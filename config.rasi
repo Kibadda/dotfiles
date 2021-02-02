@@ -1,0 +1,8 @@
+/** Basic config file **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+  modi: 	      "drun,run";
+}
+@import "/usr/share/rofi/themes/sidebar.rasi"

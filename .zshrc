@@ -118,4 +118,4 @@ alias sail='bash vendor/bin/sail'
 
 alias migrate='php artisan migrate:fresh'
 alias artisan='php artisan'
-alias tinker='php arisan tinker'
+alias tinker='php artisan tinker'

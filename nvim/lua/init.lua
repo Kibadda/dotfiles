@@ -2,78 +2,79 @@
 -- Functions
 ----------------------------------------------------------------------------------------------
 
-function map(mode, shortcut, command, options)
-    vim.api.nvim_set_keymap(mode, shortcut, command, options)
-end
-
-function set(setting, value)
-    vim.o[setting] = value
-end
-
-function global(setting, value)
-    vim.g[setting] = value
-end
+local fun = require 'usermod.functions'
 
 ----------------------------------------------------------------------------------------------
 -- Settings
 ----------------------------------------------------------------------------------------------
 
-global('mapleader', ' ')
+fun.global('mapleader', ' ')
 
-set('number', true)
-set('relativenumber', true)
-set('scrolloff', 10)
-set('sidescrolloff', 10)
-set('ignorecase', true)
-set('smartcase', true)
-set('expandtab', true)
-set('tabstop', 4)
-set('shiftwidth', 4)
-set('hidden', true)
-set('signcolumn', 'yes:2')
-set('termguicolors', true)
-set('undofile', true)
-set('title', true)
-set('wildmode', 'longest:full,full')
-set('wrap', false)
-set('joinspaces', false)
-set('splitright', true)
-set('clipboard', 'unnamedplus')
-set('confirm', true)
-set('backup', true)
-set('backupdir', '~/.config/nvim/backup/')
-set('updatetime', 300)
-set('redrawtime', 10000)
-set('compatible', false)
+fun.set('number', true)
+fun.set('relativenumber', true)
+fun.set('scrolloff', 10)
+fun.set('sidescrolloff', 10)
+fun.set('ignorecase', true)
+fun.set('smartcase', true)
+fun.set('expandtab', true)
+fun.set('tabstop', 4)
+fun.set('shiftwidth', 4)
+fun.set('hidden', true)
+fun.set('signcolumn', 'yes:2')
+fun.set('termguicolors', true)
+fun.set('undofile', true)
+fun.set('title', true)
+fun.set('wildmode', 'longest:full,full')
+fun.set('wrap', false)
+fun.set('joinspaces', false)
+fun.set('splitright', true)
+fun.set('clipboard', 'unnamedplus')
+fun.set('confirm', true)
+fun.set('backup', true)
+fun.set('backupdir', '~/.config/nvim/backup/')
+fun.set('updatetime', 300)
+fun.set('redrawtime', 10000)
+fun.set('compatible', false)
 
 ----------------------------------------------------------------------------------------------
 -- Keymaps
 ----------------------------------------------------------------------------------------------
 
-map('', 'j', 'h', {noremap = true})
-map('', 'k', 'j', {noremap = true})
-map('', 'l', 'k', {noremap = true})
-map('', 'ö', 'l', {noremap = true})
+fun.map('', 'j', 'h', {noremap = true})
+fun.map('', 'k', 'j', {noremap = true})
+fun.map('', 'l', 'k', {noremap = true})
+fun.map('', 'ö', 'l', {noremap = true})
 
-map('n', '<leader>w', ':w<CR>', {})
-map('n', '<leader>ve', ':edit ~/.config/nvim/init.lua<CR>', {})
-map('n', '<leader>vr', ':source ~/.config/nvim/init.lua<CR>', {})
-map('n', '<leader>K', ':nohlsearch<CR>', {})
-map('n', '<leader>kk', ']b', {})
-map('n', '<leader>ll', '[b', {})
-map('n', '<leader>Q', ':bufdo bdelete<CR>', {})
-map('n', '<leader>A', ':A<CR>', {})
-map('n', '<leader>;', 'A;<ESC>', {})
-map('n', '<leader>,', 'A,<ESC>', {})
+fun.map('n', '<leader>w', ':w<CR>', {})
+fun.map('n', '<leader>ve', ':edit ~/.config/nvim/init.lua<CR>', {})
+fun.map('n', '<leader>vr', ':source ~/.config/nvim/init.lua<CR>', {})
+fun.map('n', '<leader>K', ':nohlsearch<CR>', {})
+fun.map('n', '<leader>kk', ']b', {})
+fun.map('n', '<leader>ll', '[b', {})
+fun.map('n', '<leader>Q', ':bufdo bdelete<CR>', {})
+fun.map('n', '<leader>A', ':A<CR>', {})
+fun.map('n', '<leader>;', 'A;<ESC>', {})
+fun.map('n', '<leader>,', 'A,<ESC>', {})
 
-map('v', '<', '<gv', {noremap = true})
-map('v', '>', '>gv', {noremap = false})
-map('v', 'y', 'myy`y', {noremap = false})
-map('v', 'Y', 'myY`y', {noremap = false})
-map('v', '<C-r>', '"_y:%s/<C-r>h//gc<LEFT><LEFT><LEFT>', {noremap = false})
+-- fun.map('v', '<', '<gv', {noremap = true})
+-- fun.map('v', '>', '>gv', {noremap = false})
+-- fun.map('v', 'y', 'myy`y', {noremap = false})
+-- fun.map('v', 'Y', 'myY`y', {noremap = false})
+-- fun.map('v', '<C-r>', '"_y:%s/<C-r>h//gc<LEFT><LEFT><LEFT>', {noremap = false})
 
-map('n', 'gf', ':edit <cfile><CR>', {})
+fun.map('n', 'gf', ':edit <cfile><CR>', {})
 
 ----------------------------------------------------------------------------------------------
 -- Plugins
 ----------------------------------------------------------------------------------------------
+
+Plug = require 'usermod.vimplug'
+
+Plug.begin('~/.config/nvim/plugged')
+
+require 'palenight'
+
+Plug.ends()
+
+-- After plugins loaded
+vim.cmd('colorscheme palenight')

@@ -16,17 +16,20 @@ export NVM_DIR="$HOME/.nvm"
 alias la='ls -la'
 alias ll='ls -l'
 
-alias pacu='sudo pacman -Su'
+alias pacu='sudo pacman -Syyuu'
 alias paci='sudo pacman -S'
 alias pacr='sudo pacman -R'
 
 alias migrate='php artisan migrate:fresh'
+alias mig='php artisan migrate:fresh && php artisan db:seed --class=BaseSeeder'
 alias artisan='php artisan'
 alias tinker='php artisan tinker'
 alias test='php artisan test --env=testing'
-alias dusk='php artisan dusk'
+alias pest='./vendor/bin/pest'
+alias dusk='php artisan pest:dusk'
 alias q:work='php artisan queue:work'
 alias q:clear='php artisan queue:clear'
+alias log='cat /dev/null > storage/logs/laravel.log && cat /dev/null > storage/logs/admin.log'
 
 alias status='git status'
 alias fetch='git fetch --prune'
@@ -38,3 +41,8 @@ alias checkout='git checkout'
 alias merge='git merge'
 alias delete='git branch -d'
 alias lastcom='git show'
+
+alias nviminit='nvim ~/.config/nvim/init.vim'
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

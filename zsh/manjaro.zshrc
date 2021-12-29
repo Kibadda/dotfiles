@@ -43,6 +43,7 @@ alias delete='git branch -d'
 alias lastcom='git show'
 
 alias nviminit='nvim ~/.config/nvim/init.vim'
+alias ssh='kitty +kitten ssh'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -29,5 +29,6 @@
     "intelephense.environment.phpVersion": "8.1.0",
     "tailwindCSS.validate": true,
     "tailwindCSS.emmetCompletions": true,
-    "prettier.requireConfig": true
+    "prettier.requireConfig": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

@@ -26,6 +26,7 @@ nmap <leader>A :A<CR>
 nmap <leader>w :w<CR>
 nmap <leader>; A;<ESC>
 nmap <leader>, A,<ESC>
+nmap <leader>pc :pc<CR>
 
 nmap <silent> <C-k> <C-w>h
 nmap <silent> <C-l> <C-w>l

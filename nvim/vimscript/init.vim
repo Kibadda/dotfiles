@@ -23,7 +23,9 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.local/share/nvim/plugins/abolish.vim
 source ~/.local/share/nvim/plugins/airline.vim
+source ~/.local/share/nvim/plugins/auto-session.vim
 source ~/.local/share/nvim/plugins/coc.vim
+source ~/.local/share/nvim/plugins/color-schemes.vim
 source ~/.local/share/nvim/plugins/commentary.vim
 source ~/.local/share/nvim/plugins/context-commentstring.vim
 source ~/.local/share/nvim/plugins/editorconfig.vim
@@ -40,8 +42,8 @@ source ~/.local/share/nvim/plugins/lion.vim
 source ~/.local/share/nvim/plugins/markdown-preview.vim
 source ~/.local/share/nvim/plugins/nerdtree.vim
 source ~/.local/share/nvim/plugins/obsession.vim
-source ~/.local/share/nvim/plugins/onedark.vim
-source ~/.local/share/nvim/plugins/palenight.vim
+" source ~/.local/share/nvim/plugins/onedark.vim
+" source ~/.local/share/nvim/plugins/palenight.vim
 source ~/.local/share/nvim/plugins/pasta.vim
 source ~/.local/share/nvim/plugins/peekaboo.vim
 source ~/.local/share/nvim/plugins/polyglot.vim
@@ -50,6 +52,7 @@ source ~/.local/share/nvim/plugins/quickscope.vim
 source ~/.local/share/nvim/plugins/repeat.vim
 source ~/.local/share/nvim/plugins/rooter.vim
 source ~/.local/share/nvim/plugins/sayonara.vim
+source ~/.local/share/nvim/plugins/smarty.vim
 source ~/.local/share/nvim/plugins/splitjoin.vim
 source ~/.local/share/nvim/plugins/speeddating.vim
 source ~/.local/share/nvim/plugins/surround.vim
@@ -66,6 +69,7 @@ source ~/.local/share/nvim/plugins/which-key.vim
 call plug#end()
 " Load colorscheme after plugins loaded
 doautocmd User PlugLoaded
+au BufRead,BufNewFile *.tpl set filetype=smarty 
 
 "-----------------------------------------------------
 " Misc

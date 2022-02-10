@@ -37,4 +37,22 @@ let g:projectionist_heuristics = {
     \     "type": "test",
     \     "alternate": "app/Notifications/{}Notification.php",
     \   },
+    \ },
+    \ "deploy": {
+    \   "project/lib/objects/*.class.php": {
+    \     "type": "source",
+    \     "alternate": "project/lib/dao/{}DAO.class.php",
+    \   },
+    \   "project/lib/dao/*DAO.class.php": {
+    \     "type": "test",
+    \     "alternate": "project/lib/objects/{}.class.php",
+    \   },
+    \   "project/htdocs/*.php": {
+    \     "type": "source",
+    \     "alternate": "project/templates/{}.tpl",
+    \   },
+    \   "project/templates/*.tpl": {
+    \     "type": "test",
+    \     "alternate": "project/htdocs/{}.php",
+    \   },
     \ }}

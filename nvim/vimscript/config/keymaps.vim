@@ -4,10 +4,10 @@
 
 let mapleader = "\<space>"
 
-noremap j h
-noremap k j
-noremap l k
-noremap ö l
+" noremap j h
+" noremap k j
+" noremap l k
+" noremap ö l
 
 map gf :edit <cfile><CR>
 
@@ -18,13 +18,13 @@ map gf :edit <cfile><CR>
 nmap <leader>ve :edit ~/.config/nvim/init.vim<CR>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<CR>
 nmap <leader>vr :source ~/.config/nvim/init.vim<CR>
-nmap <leader>kk ]b
-nmap <leader>ll [b
+nmap <leader>jj ]b
+nmap <leader>kk [b
 nmap <leader>K :nohlsearch<CR>
 nmap <leader>Q :bufdo bdelete<CR>
 nmap <leader>A :A<CR>
 nmap <leader>w :w<CR>
-nmap <leader>; A;<ESC>
+nmap <leader>c A;<ESC>
 nmap <leader>, A,<ESC>
 nmap <leader>pc :pc<CR>
 

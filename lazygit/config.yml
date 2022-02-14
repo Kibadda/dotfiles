@@ -62,16 +62,16 @@ keybinding:
     togglePanel: <tab>
     prevItem: <up>
     nextItem: <down>
-    prevItem-alt: l
-    nextItem-alt: k
+    prevItem-alt: k
+    nextItem-alt: j
     prevPage: ','
     nextPage: .
     gotoTop: <
     gotoBottom: '>'
     prevBlock: <left>
     nextBlock: <right>
-    prevBlock-alt: j
-    nextBlock-alt: ö
+    prevBlock-alt: h
+    nextBlock-alt: l
     nextMatch: "n"
     prevMatch: "N"
     startSearch: /
@@ -87,8 +87,8 @@ keybinding:
     openFile: o
     scrollUpMain: <pgup>
     scrollDownMain: <pgdown>
-    scrollUpMain-alt1: L
-    scrollDownMain-alt1: K
+    scrollUpMain-alt1: K
+    scrollDownMain-alt1: J
     scrollUpMain-alt2: <c-u>
     scrollDownMain-alt2: <c-d>
     executeCustomCommand: ':'

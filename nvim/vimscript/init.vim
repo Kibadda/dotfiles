@@ -77,6 +77,8 @@ call plug#end()
 doautocmd User PlugLoaded
 au BufRead,BufNewFile *.tpl set filetype=smarty 
 
+" autocmd BufNewFile  *.php 0r ~/.local/share/nvim/skeletons/php.php
+
 "-----------------------------------------------------
 " Misc
 "-----------------------------------------------------

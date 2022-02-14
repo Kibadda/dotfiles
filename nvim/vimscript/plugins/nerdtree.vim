@@ -10,6 +10,7 @@ let g:NERDTreeDirArrowExpandable = '▹'
 let g:NERDTreeDirArrowCollapsible = '▿'
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 60
+let g:NERDTreeQuitOnOpen=1
 
 nnoremap <expr> <leader>n g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
 nmap <leader>N :NERDTreeFind<CR>

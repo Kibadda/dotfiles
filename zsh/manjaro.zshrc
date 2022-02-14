@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 alias la='ls -la'
 alias ll='ls -l'
 
-alias pacu='sudo pacman -Syyuu'
+alias pacu='sudo pacman -Syyuu && sudo pamac update'
 alias paci='sudo pacman -S'
 alias pacr='sudo pacman -R'
 

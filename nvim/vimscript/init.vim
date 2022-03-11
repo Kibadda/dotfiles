@@ -24,7 +24,6 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.local/share/nvim/plugins/abolish.vim
 source ~/.local/share/nvim/plugins/airline.vim
-source ~/.local/share/nvim/plugins/auto-session.vim
 source ~/.local/share/nvim/plugins/coc.vim
 " source ~/.local/share/nvim/plugins/coq.vim
 source ~/.local/share/nvim/plugins/color-schemes.vim
@@ -47,8 +46,6 @@ source ~/.local/share/nvim/plugins/markdown-preview.vim
 source ~/.local/share/nvim/plugins/nerdtree.vim
 " source ~/.local/share/nvim/plugins/nvim-notify.vim
 source ~/.local/share/nvim/plugins/obsession.vim
-" source ~/.local/share/nvim/plugins/onedark.vim
-" source ~/.local/share/nvim/plugins/palenight.vim
 source ~/.local/share/nvim/plugins/pasta.vim
 source ~/.local/share/nvim/plugins/peekaboo.vim
 source ~/.local/share/nvim/plugins/polyglot.vim

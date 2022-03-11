@@ -27,9 +27,10 @@ nmap <leader>w :w<CR>
 nmap <leader>c A;<ESC>
 nmap <leader>, A,<ESC>
 nmap <leader>pc :pc<CR>
+nmap <leader>vs :vs<CR><C-w><C-w>
 
 nmap <silent> <C-k> <C-w>h
-nmap <silent> <C-l> <C-w>l
+nmap <silent> <C-j> <C-w>l
 
 nnoremap * *<C-o>
 
